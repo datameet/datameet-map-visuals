@@ -1,10 +1,7 @@
-
-
-$(document).ready(function(){
-// begin code
-	d3.csv('/data/csv/lala.csv' , function(info){
-		d3.json('/data/geojson/states.geojson' , function(states){
-			var map = L.map('statesmap').setView([23.40, 83.00], 4);
+var plotStates = function(pane){
+	d3.json('/data/geojson/states.geojson' , function(states){	
+		d3.csv('/data/csv/statesCensus.csv' , function(info){
+			var map = L.map(pane).setView([23.40, 83.00], 4);
 			L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
 				maxZoom: 18,
 				attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -73,7 +70,6 @@ $(document).ready(function(){
 
 			    layer.setStyle({
 			        weight: 3,
-			        // color: '#666',
 			        dashArray: '',
 			        fillOpacity: 0.8
 			    });
@@ -124,5 +120,4 @@ $(document).ready(function(){
 			
 		})
 	})
-// end code
-});
+}
