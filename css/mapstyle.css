@@ -29,3 +29,40 @@
     margin-right: 8px;
     opacity: 0.8;
 }
+
+#distsmap {
+	width: 700px;
+	height: 800px;
+}
+
+#distsmap .info {
+    margin-top: 160px ;
+    margin-right: 10px;
+    padding: 6px 8px;
+    font: 0.7rem Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+#distsmap .info h6 {
+	font-size: 1.2rem;
+    margin: 0 0 5px;
+    color: #777;
+}
+
+#distsmap .legend {
+    line-height: 18px;
+    color: #555;
+    margin-bottom: 150px ;
+    margin-right: 10px;
+}
+
+#distsmap .legend-control input {
+    /*width: 15px;*/
+    /*height: 15px;*/
+    float: left;
+    /*margin-right: 8px;*/
+    margin-bottom: 8px;
+    /*opacity: 0.8;*/
+}
