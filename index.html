@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="/bower_components/materialize/dist/css/materialize.min.css">
 		<link rel="stylesheet" href="/bower_components/leaflet/dist/leaflet.css">
 		<link rel="stylesheet" href="/css/mapstyle.css"></link>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta charset="UTF-8">
 	</head>
 	<body>
+		<nav class="nav-extended">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">Datameet Maps</a>
+			</div>
+			<div class="nav-content">
+				<ul class="tabs tabs-transparent tabs-fixed-width">
+					<li class="tab"><a class="active" href="#statesmap">State Boundaries</a></li>
+					<li class="tab"><a href="#distsmap">District Boundaries</a></li>
+					<li class="tab"><a href="#pcmap">Parliamentary Constituencies</a></li>
+					<li class="tab"><a href="#acmap">Assembly Constitituencies</a></li>
+				</ul>
+			</div>
+		</nav>
 
-		<div id='statesmap'></div>
+		<div id='statesmap' class = 'col s12'></div>
 		<div id='distsmap'></div>
+		<div id='pcmap'></div>
+		<div id='acmap'></div>
 
 		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="/bower_components/materialize/dist/js/materialize.min.js"></script>
 		<script src="/bower_components/leaflet/dist/leaflet.js"></script>
 		<script src="/bower_components/d3/d3.min.js"></script>
-		<script src="js/mapsplot.js"></script>
+		<script src="js/st.js"></script>
+		<script src="js/dt.js"></script>
+		<script src="js/pc.js"></script>
+		<script src="js/ac.js"></script>
 		<script> 
 			plotStates('statesmap') 
 			plotDistricts('distsmap')
+			plotPC('pcmap')
+			plotAC('acmap')
 		</script>
 	</body>
 </html>
